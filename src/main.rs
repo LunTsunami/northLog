@@ -1,3 +1,5 @@
+mod compute;
+
 extern crate ansi_term;
 extern crate chrono;
 
@@ -8,6 +10,7 @@ use std::io::Write;
 use std::path::Path;
 use std::string::ToString;
 use std::env;
+use compute::compute_fn;
 
 
 fn main() {
@@ -66,8 +69,14 @@ fn makelog_nolg(content: &String){
         println!("content has been written to the file.");
     }
     else {
+        let hashvalue = compute_fn::gen_hash_from(content);
+
         let mut file = std::fs::File::create(final_filename).expect("Failed to create file.");
         println!("{:?}",file);
+        file.write_all("============================\nHASH VALUE HEAD BEGIN: \n".as_bytes()).expect("Failed to open");
+        file.write_all(hashvalue.to_string().as_bytes()).expect("Failed to write");
+        file.write_all("\nHASH VALUE HEAD END. \n============================\n".as_bytes()).expect("Failed to open");
+
         file.write_all(content.as_bytes()).expect("写入失败");
         println!("content has been written to the file.");
     }
