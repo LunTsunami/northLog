@@ -1,0 +1,3 @@
+namespace northAPI {
+    void call();
+}
