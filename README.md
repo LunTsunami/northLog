@@ -43,3 +43,14 @@ $\color{Red}Important$
 
 ## ISSUE
 请勿随意提交issue，我把当前的问题挪到了“已知问题”。你可以在“issue”目录下查看这些问题。修复问题的补丁请在对应的问题目录下标记“[已解决]”必要时可注明修复的版本
+
+## 运行方式
+你可以在命令行中运行northLog:
+
+```Powershell
+norl.exe [options] [Content]
+```
+比如
+```Powershell
+norl.exe nolg "Hello World!"
+```
