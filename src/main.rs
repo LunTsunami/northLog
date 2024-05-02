@@ -40,7 +40,7 @@ fn makelog_nolg(content: &String){
     let time_to_write = now.year().to_string() + "0" + &now.month().to_string()+ "0" + &now.day().to_string();
     
     let file_head = String::from("nolg-");
-    let file_ending = String::from("-report.txt");
+    let file_ending = String::from("-report.log");
 
     let final_filename = file_head + &time_to_write + &file_ending;
 
