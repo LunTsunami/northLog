@@ -1,0 +1,12 @@
+patch {
+    type => patch_release
+    remove => {
+        ./submodel/toolchain/*
+    } <= finish work
+
+    public 1.1.0 => {
+        build,
+        release,
+        release_note
+    } <= done
+}

@@ -1,0 +1,21 @@
+patch {
+    type => patch_code
+    add <= {
+        utility.rs
+    } <= finish work
+
+    mod => {
+        ./src/compute.rs
+        ./cargo.toml
+        ./README.md
+    } <= done
+
+    mkvis => {
+        inside_workflow
+    } <= changed
+
+    new => {
+        HTML
+        WebPage
+    }  <= done
+}

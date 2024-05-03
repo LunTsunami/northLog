@@ -60,9 +60,9 @@
 你可以在命令行中运行northLog:
 
 ```Powershell
-norl.exe [options] [Content]
+norlg.exe [options] [Content]
 ```
 比如
 ```Powershell
-norl.exe nolg "Hello World!"
+norlg.exe nolg "Hello World!"
 ```

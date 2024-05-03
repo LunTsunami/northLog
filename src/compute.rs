@@ -8,4 +8,11 @@ pub mod compute_fn {
         t.hash(&mut hasher);
         hasher.finish()
     }
+
+    /// 生成随机数以确保唯一性
+    use rand::Rng;
+    pub fn randnum() -> u32 {
+        let mut rng = rand::thread_rng();
+        rng.gen::<u32>()
+    }
 }
